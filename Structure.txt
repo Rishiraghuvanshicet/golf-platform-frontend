@@ -1,35 +1,60 @@
-client/
+src/
 │
-├── src/
+├── api/
+│   ├── adminApi.js
+│   ├── authApi.js
+│   ├── axios.js
+│   ├── charityApi.js
+│   ├── donationApi.js
+│   ├── drawApi.js
+│   ├── scoreApi.js
+│   ├── subscriptionApi.js
+│   ├── userApi.js
+│   └── winnerApi.js
 │
-│   ├── api/
-│   │   └── axios.js
+├── components/
+│   ├── Loader.jsx
+│   ├── NavBar.jsx
+│   ├── ProtectedRoute.jsx
+│   ├── RouteSeo.jsx
+│   └── ScoreForm.jsx
 │
-│   ├── components/
-│   │   ├── Navbar.jsx
-│   │   ├── ProtectedRoute.jsx
-│   │   ├── ScoreForm.jsx
-│   │   ├── Loader.jsx
+├── hooks/
+│   └── (custom hooks here)
 │
+├── pages/
+│   ├── Admin.jsx
+│   ├── Charity.jsx
+│   ├── CharityDetail.jsx
+│   ├── Dashboard.jsx
+│   ├── Donate.jsx
+│   ├── Draw.jsx
+│   ├── Landing.jsx
+│   ├── Login.jsx
+│   ├── Register.jsx
+│   ├── Subscription.jsx
+│   └── Winner.jsx
+│
+├── styles/
 │   ├── pages/
-│   │   ├── Login.jsx
-│   │   ├── Register.jsx
-│   │   ├── Dashboard.jsx
-│   │   ├── Draw.jsx
-│   │   ├── Winner.jsx
-│   │   ├── Charity.jsx
-│   │   ├── Subscription.jsx
+│   │   ├── admin.css
+│   │   ├── auth.css
+│   │   ├── charity-detail.css
+│   │   ├── charity.css
+│   │   ├── dashboard.css
+│   │   ├── donate.css
+│   │   ├── draw.css
+│   │   ├── landing.css
+│   │   ├── score-form.css
+│   │   ├── subscription.css
+│   │   └── winner.css
+│   │
+│   ├── global.css
+│   ├── layout.css
+│   ├── navbar.css
+│   └── ui.css
 │
-│   ├── styles/
-│   │   └── main.css
-│
-│   ├── App.js
-│   └── index.js
+├── App.css
+├── App.js
+├── index.js
 
-
-
-adminseed@example.com
- pass1234
-UserId to promote: 69cce1a3981f6e9c4e3f23ec
-Login with adminseed@example.com
-Open /admin

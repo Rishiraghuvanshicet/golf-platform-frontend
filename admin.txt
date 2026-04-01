@@ -1,0 +1,4 @@
+url - https://golf-platform-frontend-production.up.railway.app/
+
+admin	 email-	admin@gmail.com
+	 password - pass1234	
