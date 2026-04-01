@@ -1,0 +1,97 @@
+/* Responsive shell: container, page, grids, flex helpers */
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-left: clamp(12px, 4vw, 24px);
+  padding-right: clamp(12px, 4vw, 24px);
+  padding-top: clamp(12px, 3vw, 24px);
+  padding-bottom: clamp(12px, 3vw, 24px);
+}
+
+.page {
+  min-height: calc(100vh - var(--nav-height));
+  padding-bottom: clamp(40px, 8vw, 64px);
+}
+
+/* ——— xs: single column ——— */
+.grid {
+  display: grid;
+  gap: var(--gap);
+}
+
+.grid-2,
+.grid-3 {
+  grid-template-columns: 1fr;
+}
+
+/* ——— md: 2 columns ——— */
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ——— lg: 3 columns where needed ——— */
+@media (min-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 2vw, 12px);
+  flex-wrap: wrap;
+}
+
+.spacer {
+  flex: 1;
+}
+
+/* Page header: stack on xs/sm, split from md+ */
+.page-head--split {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--gap);
+}
+
+@media (min-width: 768px) {
+  .page-head--split {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.page-head__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (min-width: 768px) {
+  .page-head__actions {
+    justify-content: flex-end;
+  }
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+.mt-4 {
+  margin-top: clamp(12px, 3vw, 16px);
+}
+.mt-5 {
+  margin-top: clamp(14px, 3.5vw, 20px);
+}
+.mt-6 {
+  margin-top: clamp(16px, 4vw, 24px);
+}

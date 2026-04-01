@@ -1,0 +1,54 @@
+/* Score form (Dashboard) — grid gap matches --gap */
+.score-form {
+  gap: clamp(12px, 3vw, 14px);
+}
+
+.score-form .panel-head {
+  justify-content: space-between;
+}
+
+.score-form .panel-intro {
+  margin-top: 4px;
+}
+
+.score-form .inputs {
+  margin-top: 12px;
+}
+
+.score-form .actions {
+  margin-top: 12px;
+}
+
+.score-form .hint {
+  margin: 0;
+}
+
+.score-form .recent {
+  margin-top: 6px;
+}
+
+.score-form .recent-list {
+  margin-top: 10px;
+}
+
+.score-form .recent-grid {
+  gap: 10px;
+}
+
+.score-form .score-row {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.score-form .score-value {
+  font-weight: 700;
+  font-size: clamp(1rem, 3vw, 1.125rem);
+}
+
+.score-form .score-date {
+  margin: 0;
+}

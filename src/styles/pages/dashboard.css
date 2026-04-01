@@ -1,0 +1,35 @@
+/* Dashboard */
+.page-dashboard .title-tight {
+  margin-top: 6px;
+}
+
+.page-dashboard .lead-spaced {
+  margin-top: 8px;
+}
+
+.page-dashboard .metrics-line {
+  margin-top: 10px;
+  line-height: 1.55;
+}
+
+.page-dashboard .metrics-line--tight {
+  margin-top: 8px;
+}
+
+.page-dashboard .card-actions {
+  margin-top: 12px;
+}
+
+.page-dashboard .score-slot {
+  margin-top: clamp(18px, 4vw, 22px);
+}
+
+.page-dashboard .why-text {
+  margin-top: 12px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.page-dashboard .footer-link {
+  margin-top: 12px;
+}

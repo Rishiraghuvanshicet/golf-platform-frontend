@@ -1,0 +1,30 @@
+/* Donate */
+.page-donate .intro {
+  max-width: 58ch;
+}
+
+.page-donate .grid-main {
+  margin-top: clamp(16px, 4vw, 20px);
+}
+
+.page-donate .history-title {
+  margin-top: 12px;
+}
+
+.page-donate .history-list {
+  margin-top: 10px;
+  padding-left: 1.1rem;
+}
+
+.page-donate .field-first {
+  margin-top: 12px;
+}
+
+.page-donate .history-empty {
+  margin-top: 10px;
+}
+
+.page-donate .back-link {
+  margin-top: 16px;
+  display: inline-block;
+}

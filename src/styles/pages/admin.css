@@ -1,0 +1,159 @@
+/* Admin */
+.page-admin .tab-row {
+  margin-top: 14px;
+  gap: 8px;
+}
+
+.page-admin .tab-row .spacer {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .page-admin .tab-row .spacer {
+    display: block;
+    flex: 1;
+  }
+}
+
+.page-admin .tab-row--scroll {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 6px;
+}
+
+@media (min-width: 1024px) {
+  .page-admin .tab-row {
+    flex-wrap: wrap;
+  }
+
+  .page-admin .tab-row--scroll {
+    overflow-x: visible;
+    padding-bottom: 0;
+  }
+}
+
+.page-admin .overview-grid {
+  margin-top: clamp(14px, 3vw, 16px);
+}
+
+.page-admin .quick-actions {
+  margin-top: 8px;
+}
+
+.page-admin .quick-buttons {
+  margin-top: 12px;
+}
+
+.page-admin .table-section {
+  margin-top: clamp(14px, 3vw, 16px);
+}
+
+.page-admin .data-table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.page-admin .data-table th {
+  text-align: left;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.72);
+  padding: 10px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .page-admin .data-table th {
+    font-size: 12px;
+    padding: 12px 10px;
+  }
+}
+
+.page-admin .data-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  vertical-align: top;
+  font-size: 13px;
+}
+
+@media (min-width: 768px) {
+  .page-admin .data-table td {
+    padding: 12px 10px;
+    font-size: 14px;
+  }
+}
+
+.page-admin .data-table td.nowrap,
+.page-admin .data-table .nowrap {
+  white-space: nowrap;
+}
+
+.page-admin .data-table .empty {
+  padding: 14px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.page-admin .operations-grid {
+  margin-top: clamp(14px, 3vw, 16px);
+}
+
+.page-admin .header-row {
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--gap);
+}
+
+@media (min-width: 768px) {
+  .page-admin .header-row {
+    align-items: center;
+  }
+}
+
+.page-admin .summary-grid {
+  margin-top: 12px;
+  gap: 10px;
+}
+
+.page-admin .summary-row {
+  justify-content: space-between;
+}
+
+.page-admin .card.table-wrap {
+  padding: 0;
+  overflow: hidden;
+}
+
+.page-admin .table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: clamp(10px, 2.5vw, 14px);
+}
+
+.page-admin .operations-card p {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.page-admin .operations-actions {
+  margin-top: 12px;
+}
+
+.page-admin .charity-ops {
+  margin-top: 12px;
+  gap: 10px;
+}
+
+.page-admin .charity-row {
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+@media (max-width: 767px) {
+  .page-admin .charity-row {
+    flex-direction: column;
+  }
+}

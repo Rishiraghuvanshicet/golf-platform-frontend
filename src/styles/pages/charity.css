@@ -1,0 +1,84 @@
+/* Charity directory */
+.page-charity .filters {
+  margin-top: clamp(16px, 4vw, 20px);
+}
+
+.page-charity .admin-form {
+  margin-top: clamp(16px, 4vw, 20px);
+}
+
+.page-charity .admin-form__grid {
+  margin-top: 16px;
+}
+
+.page-charity .admin-form__field {
+  margin-top: 12px;
+}
+
+.page-charity .admin-events {
+  margin-top: 18px;
+}
+
+.page-charity .admin-events__hint {
+  margin-top: 6px;
+}
+
+.page-charity .admin-events__list {
+  margin-top: 14px;
+}
+
+.page-charity .event-editor-row {
+  padding: clamp(12px, 3vw, 14px) !important;
+}
+
+.page-charity .event-editor-row .row-actions {
+  margin-top: 10px;
+  justify-content: flex-end;
+}
+
+.page-charity .admin-submit {
+  margin-top: 16px;
+}
+
+.page-charity .card-grid {
+  margin-top: clamp(16px, 4vw, 20px);
+}
+
+.page-charity .charity-card {
+  min-height: 100%;
+}
+
+.page-charity .charity-card__desc {
+  margin-top: 12px;
+  line-height: 1.55;
+}
+
+.page-charity .charity-card__events-hint {
+  margin-top: 10px;
+}
+
+.page-charity .charity-card__actions {
+  margin-top: 14px;
+}
+
+.page-charity .admin-head {
+  align-items: flex-start;
+}
+
+.page-charity .admin-blurb {
+  margin-top: 8px;
+  max-width: 62ch;
+}
+
+.page-charity .events-toolbar {
+  justify-content: space-between;
+}
+
+.page-charity .charity-card__head {
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.page-charity .event-grid-tight {
+  margin-top: 10px;
+}

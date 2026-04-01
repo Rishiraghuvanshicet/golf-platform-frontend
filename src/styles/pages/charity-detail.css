@@ -1,0 +1,118 @@
+/* Charity profile */
+.page-charity-detail .detail-head {
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--gap);
+}
+
+.page-charity-detail .title-tight {
+  margin-top: 6px;
+}
+
+.page-charity-detail .lead {
+  margin-top: 8px;
+}
+
+.page-charity-detail .not-found {
+  margin-top: 0;
+}
+
+.page-charity-detail .hero-media {
+  margin-top: clamp(16px, 4vw, 20px);
+  border-radius: var(--radius2);
+  overflow: hidden;
+  border: 1px solid rgba(255, 215, 190, 0.12);
+  box-shadow: var(--shadow-soft);
+}
+
+.page-charity-detail .cover-img {
+  display: block;
+  width: 100%;
+  max-height: min(360px, 55vh);
+  object-fit: cover;
+}
+
+.page-charity-detail .impact-card {
+  margin-top: clamp(16px, 4vw, 20px);
+}
+
+.page-charity-detail .impact-text {
+  margin-top: 12px;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.page-charity-detail .events-section {
+  margin-top: clamp(16px, 4vw, 20px);
+}
+
+.page-charity-detail .events-intro {
+  margin-top: 6px;
+}
+
+.page-charity-detail .events-empty {
+  margin-top: 14px;
+}
+
+.page-charity-detail .events-empty p {
+  margin: 0;
+}
+
+.page-charity-detail .event-timeline {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  gap: clamp(12px, 3vw, 14px);
+}
+
+.page-charity-detail .event-card {
+  margin: 0;
+  padding: clamp(14px, 3.5vw, 18px);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 215, 190, 0.14);
+  background: linear-gradient(145deg, rgba(255, 246, 238, 0.06), rgba(20, 17, 16, 0.2));
+}
+
+.page-charity-detail .event-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.page-charity-detail .event-date {
+  font-weight: 700;
+  color: var(--rise);
+  font-size: clamp(0.9rem, 2.5vw, 0.95rem);
+}
+
+.page-charity-detail .event-date.muted {
+  color: var(--muted2);
+  font-weight: 600;
+}
+
+.page-charity-detail .event-title {
+  margin: 10px 0 0;
+  font-size: clamp(1.05rem, 3vw, 1.15rem);
+  letter-spacing: -0.02em;
+}
+
+.page-charity-detail .event-desc {
+  margin: 8px 0 0;
+  line-height: 1.55;
+}
+
+.page-charity-detail .cta-row {
+  margin-top: clamp(20px, 4vw, 24px);
+  flex-direction: column;
+  align-items: stretch;
+}
+
+@media (min-width: 480px) {
+  .page-charity-detail .cta-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}

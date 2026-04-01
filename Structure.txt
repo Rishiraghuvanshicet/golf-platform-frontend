@@ -25,3 +25,11 @@ client/
 │
 │   ├── App.js
 │   └── index.js
+
+
+
+adminseed@example.com
+ pass1234
+UserId to promote: 69cce1a3981f6e9c4e3f23ec
+Login with adminseed@example.com
+Open /admin

@@ -1,0 +1,128 @@
+/* Draw page + admin draw controls */
+.page-draw .admin-panel {
+  margin-top: clamp(16px, 4vw, 20px);
+}
+
+.page-draw .admin-intro {
+  margin-top: 8px;
+  max-width: 58ch;
+}
+
+.page-draw .admin-toolbar {
+  margin-top: clamp(12px, 3vw, 16px);
+}
+
+.page-draw .admin-head-row {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.page-draw .draw-card-top {
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.page-draw .draw-card-pills {
+  gap: 8px;
+}
+
+.page-draw .info-card {
+  margin-top: clamp(16px, 4vw, 20px);
+}
+
+.page-draw .info-card p {
+  margin: 0;
+}
+
+.page-draw .draw-list {
+  margin-top: clamp(18px, 4vw, 22px);
+}
+
+.page-draw .draw-card__numbers {
+  margin-top: 14px;
+}
+
+.page-draw .draw-card__meta {
+  margin-top: 12px;
+}
+
+.page-draw .draw-card__pool {
+  margin-top: 12px;
+  line-height: 1.65;
+}
+
+.page-draw .draw-card__publish {
+  margin-top: 14px;
+}
+
+/* Draw balls */
+.page-draw .draw-balls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(8px, 2vw, 10px);
+}
+
+.page-draw .draw-ball {
+  width: clamp(40px, 10vw, 44px);
+  height: clamp(40px, 10vw, 44px);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: clamp(0.95rem, 3vw, 1.05rem);
+  background: linear-gradient(145deg, rgba(255, 246, 238, 0.14), rgba(224, 112, 92, 0.2));
+  border: 1px solid rgba(255, 215, 190, 0.2);
+  animation: draw-float 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-draw .draw-ball {
+    animation: none;
+  }
+}
+
+.page-draw .draw-ball:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.page-draw .draw-ball:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.page-draw .draw-ball:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.page-draw .draw-ball:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+@keyframes draw-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.page-draw .check-card {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: clamp(12px, 3vw, 14px);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 215, 190, 0.14);
+  background: rgba(255, 246, 238, 0.04);
+  cursor: pointer;
+}
+
+.page-draw .check-card input {
+  width: auto;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.page-draw .check-card .block {
+  margin-top: 4px;
+}

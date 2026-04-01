@@ -2,31 +2,41 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
 import Navbar from "./components/NavBar";
+import RouteSeo from "./components/RouteSeo";
 import ProtectedRoute from "./components/ProtectedRoute";
 
+import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import Draw from "./pages/Draw";
 import Winner from "./pages/Winner";
 import Charity from "./pages/Charity";
+import CharityDetail from "./pages/CharityDetail";
+import Donate from "./pages/Donate";
 import Subscription from "./pages/Subscription";
+import Admin from "./pages/Admin";
 
 function App() {
   return (
     <BrowserRouter>
+      <RouteSeo />
       <Navbar />
       <ToastContainer />
 
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Landing />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
         <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
         <Route path="/draw" element={<ProtectedRoute><Draw /></ProtectedRoute>} />
         <Route path="/winner" element={<ProtectedRoute><Winner /></ProtectedRoute>} />
-        <Route path="/charity" element={<ProtectedRoute><Charity /></ProtectedRoute>} />
+        <Route path="/charity" element={<Charity />} />
+        <Route path="/charity/:id" element={<CharityDetail />} />
+        <Route path="/donate" element={<ProtectedRoute><Donate /></ProtectedRoute>} />
         <Route path="/subscription" element={<ProtectedRoute><Subscription /></ProtectedRoute>} />
+        <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
       </Routes>
     </BrowserRouter>
   );

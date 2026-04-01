@@ -1,0 +1,33 @@
+/* Winnings */
+.page-winner .intro {
+  max-width: 65ch;
+}
+
+.page-winner .win-head {
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+@media (min-width: 480px) {
+  .page-winner .win-head {
+    align-items: center;
+  }
+}
+
+.page-winner .win-list {
+  margin-top: clamp(16px, 4vw, 20px);
+}
+
+.page-winner .win-card__proof {
+  margin-top: 12px;
+}
+
+.page-winner .win-card__meta {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.page-winner .win-actions {
+  margin-top: 12px;
+}

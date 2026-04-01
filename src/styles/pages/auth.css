@@ -1,0 +1,28 @@
+/* Login + Register */
+.page-auth .auth-lead {
+  text-align: center;
+  margin-top: -6px;
+  margin-bottom: 4px;
+  padding: 0 4px;
+}
+
+.page-auth .auth-fields {
+  display: grid;
+  gap: 0;
+}
+
+@media (min-width: 480px) {
+  .page-auth .auth-lead {
+    margin-top: -8px;
+  }
+}
+
+.page-auth .auth-field {
+  margin-top: 10px;
+}
+
+.page-auth .auth-hint {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 14px;
+}

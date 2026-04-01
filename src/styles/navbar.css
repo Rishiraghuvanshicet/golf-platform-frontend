@@ -1,0 +1,127 @@
+/* NavBar only — responsive xs / md / lg */
+
+.nav-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(14px);
+  background: rgba(20, 17, 16, 0.72);
+  border-bottom: 1px solid rgba(255, 215, 190, 0.09);
+}
+
+.nav-wrap .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    gap: 14px;
+    padding: 14px 0;
+    flex-wrap: nowrap;
+  }
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: clamp(0.95rem, 3vw, 1rem);
+  flex-shrink: 0;
+}
+
+.brand-badge {
+  width: 30px;
+  height: 30px;
+  border-radius: 11px;
+  background: linear-gradient(135deg, var(--brand), var(--brand2));
+  box-shadow: 0 12px 32px rgba(224, 112, 92, 0.28);
+}
+
+@media (min-width: 768px) {
+  .brand-badge {
+    width: 34px;
+    height: 34px;
+    border-radius: 12px;
+  }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* xs–sm: full-width scrolling link row */
+@media (max-width: 767px) {
+  .nav-links {
+    order: 3;
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+    margin-top: 4px;
+    gap: 6px;
+    scrollbar-width: thin;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .spacer {
+    display: none;
+  }
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  color: var(--muted);
+  border: 1px solid transparent;
+  font-size: 13px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .nav-link {
+    gap: 8px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    font-size: 14px;
+  }
+}
+
+.nav-link:hover {
+  color: var(--text);
+  border-color: rgba(255, 215, 190, 0.14);
+  background: rgba(255, 240, 228, 0.06);
+}
+
+.nav .row {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+  .nav .row {
+    margin-left: 0;
+  }
+}

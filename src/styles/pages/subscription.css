@@ -1,0 +1,20 @@
+/* Subscription */
+.page-subscription .grid-plans {
+  margin-top: clamp(14px, 3.5vw, 16px);
+}
+
+.page-subscription .status-detail {
+  margin-top: 8px;
+}
+
+.page-subscription .plan-hint {
+  margin-top: 8px;
+}
+
+.page-subscription .plan-actions {
+  margin-top: 12px;
+}
+
+.page-subscription .cancel-row {
+  margin-top: 12px;
+}

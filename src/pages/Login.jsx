@@ -1,57 +1,31 @@
-import { useState } from "react";
-import API from "../api/axios";
-import { toast } from "react-toastify";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useLoginForm } from "../hooks/useLoginForm";
+import "../styles/pages/auth.css";
 
 export default function Login() {
-  const [data, setData] = useState({
-    email: "",
-    password: ""
-  });
-
-  const navigate = useNavigate();
-
-  const login = async () => {
-    if (!data.email || !data.password) {
-      return toast.error("All fields required");
-    }
-
-    try {
-      const res = await API.post("/auth/login", data);
-
-      localStorage.setItem("token", res.data.token);
-
-      toast.success("Login successful 🚀");
-      navigate("/dashboard");
-    } catch (err) {
-      toast.error(err?.response?.data?.msg || "Login failed");
-    }
-  };
+  const { data, setData, login } = useLoginForm();
 
   return (
-    <div className="auth-container">
+    <div className="auth-container page-auth">
       <div className="auth-card">
         <h2>Login</h2>
+        <p className="subtitle auth-lead">Welcome back — let’s make this month count.</p>
 
         <input
           type="email"
           placeholder="Email"
           value={data.email}
-          onChange={(e) =>
-            setData({ ...data, email: e.target.value })
-          }
+          onChange={(e) => setData({ ...data, email: e.target.value })}
         />
 
         <input
           type="password"
           placeholder="Password"
           value={data.password}
-          onChange={(e) =>
-            setData({ ...data, password: e.target.value })
-          }
+          onChange={(e) => setData({ ...data, password: e.target.value })}
         />
 
-        <button onClick={login}>Login</button>
+        <button onClick={login}>Sign in</button>
 
         <div className="auth-link">
           Don’t have an account?{" "}
