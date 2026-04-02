@@ -22,55 +22,75 @@ function App() {
     <BrowserRouter>
       <RouteSeo />
       <Navbar />
-      <ToastContainer />
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        pauseOnHover={false}
+        draggable={false}
+      />
 
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
-        <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
-        <Route path="/draw" element={<ProtectedRoute><Draw /></ProtectedRoute>} />
-        <Route path="/winner" element={<ProtectedRoute><Winner /></ProtectedRoute>} />
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/draw"
+          element={
+            <ProtectedRoute>
+              <Draw />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/winner"
+          element={
+            <ProtectedRoute>
+              <Winner />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/charity" element={<Charity />} />
         <Route path="/charity/:id" element={<CharityDetail />} />
-        <Route path="/donate" element={<ProtectedRoute><Donate /></ProtectedRoute>} />
-        <Route path="/subscription" element={<ProtectedRoute><Subscription /></ProtectedRoute>} />
-        <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
+        <Route
+          path="/donate"
+          element={
+            <ProtectedRoute>
+              <Donate />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/subscription"
+          element={
+            <ProtectedRoute>
+              <Subscription />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute>
+              <Admin />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import { useEffect, useMemo, useState } from "react";
 // import "./App.css";

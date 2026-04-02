@@ -16,7 +16,7 @@ export function useLoginForm() {
       const res = await authApi.login(data);
       localStorage.setItem("token", res.data.token);
       window.dispatchEvent(new Event("auth:changed"));
-      toast.success("Login successful 🚀");
+      toast.success("Login successful — welcome back!");
       if (res.data?.user?.role === "admin") navigate("/admin");
       else navigate("/dashboard");
     } catch (err) {

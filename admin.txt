@@ -1,4 +1,4 @@
-url - https://golf-platform-frontend-production.up.railway.app/
+url - https://golf-platform-frontend-coral.vercel.app/
 
 admin	 email-	admin@gmail.com
 	 password - pass1234	
