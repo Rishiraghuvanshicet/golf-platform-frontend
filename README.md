@@ -1,70 +1,220 @@
-# Getting Started with Create React App
+# ⛳ Golf Charity Subscription Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack MERN application that combines **golf performance tracking**, **monthly prize draws**, and **charity contributions** into one engaging platform.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+### 👤 Authentication
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* User Signup & Login (JWT आधारित authentication)
+* Role-based access (User / Admin)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### ⛳ Score Management
 
-### `npm test`
+* Users can enter golf scores (1–45)
+* Only last 5 scores are stored (rolling logic)
+* Scores displayed in reverse chronological order
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🎲 Draw System
 
-### `npm run build`
+* Monthly draw with 5 random numbers
+* Match logic:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  * 5 match → Jackpot (40%)
+  * 4 match → Medium prize (35%)
+  * 3 match → Small prize (25%)
+* Prize distribution handled automatically
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🏆 Winner System
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Winners stored in database
+* Proof upload support
+* Admin approval system
+* Payment status tracking (Pending → Paid)
 
-### `npm run eject`
+### ❤️ Charity System
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Users can select a charity
+* Minimum 10% contribution
+* Charity listing and management
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 💳 Subscription System
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Monthly / Yearly plans
+* Active subscription required for participation
+* Middleware-based access control
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 🧑‍💻 Admin Features
 
-## Learn More
+* Run draw
+* Manage users
+* Verify winners
+* Manage charities
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🛠️ Tech Stack
 
-### Code Splitting
+### Frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* React.js
+* React Router DOM
+* Axios
+* React Toastify
+* React Icons
+* CSS (Custom Styling)
 
-### Analyzing the Bundle Size
+### Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* Node.js
+* Express.js
+* MongoDB (Mongoose)
+* JWT Authentication
+* bcrypt.js
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📁 Project Structure
 
-### Advanced Configuration
+```
+golf-platform/
+│
+├── client/          # React Frontend
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── api/
+│   │   └── styles/
+│
+├── server/          # Node Backend
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   └── config/
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## ⚙️ Installation & Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 1️⃣ Clone Repository
 
-### `npm run build` fails to minify
+```bash
+create folder golf-platform
+cd golf-platform
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+git clone https://github.com/Rishiraghuvanshicet/golf-platform-frontend
+cd golf-platform-frontend
+
+git clone https://github.com/Rishiraghuvanshicet/golf-platform-server
+cd golf-platform-server
+```
+
+---
+
+### 2️⃣ Backend Setup
+
+```bash
+cd server
+npm install
+```
+
+Create `.env` file:
+
+```
+MONGO_URI=your_mongodb_url
+JWT_SECRET=your_secret_key
+PORT='XXXX'
+PRIZE_POOL_CONTRIBUTION_PER_SUB= "100"
+```
+
+Run backend:
+
+```bash
+npm run dev
+```
+
+---
+
+### 3️⃣ Frontend Setup
+
+```bash
+cd client
+npm install
+npm start
+```
+Create `.env` file:
+
+```
+
+REACT_APP_API_BASE_URL=" "
+---
+
+## 🔐 API Routes
+
+### Auth
+
+* `POST /api/auth/register`
+* `POST /api/auth/login`
+
+### Score
+
+* `POST /api/score` (Protected + Subscription Required)
+
+### Draw
+
+* `POST /api/draw/run` (Admin)
+* `GET /api/draw`
+
+### Winner
+
+* `GET /api/winner/my`
+* `POST /api/winner/upload-proof`
+* `PUT /api/winner/approve/:id` (Admin)
+
+### Subscription
+
+* `POST /api/subscription`
+* `GET /api/subscription/me`
+
+### Charity
+
+* `GET /api/charity`
+* `POST /api/charity` (Admin)
+
+---
+
+## 🔥 Key Highlights
+
+* Full-stack MERN project
+* Real-world business logic (subscriptions + prize pools)
+* Secure authentication with JWT
+* Scalable architecture
+* Clean UI with responsive design
+
+---
+
+## 🚀 Future Improvements
+
+* Stripe payment integration
+* Cloudinary for image upload
+* Email notifications (Nodemailer)
+* Admin analytics dashboard
+* Mobile app (React Native)
+
+---
+
+## 👨‍💻 Author
+
+**Rishi Raghuvanshi**
+
+---
+
+## 📌 Note
+
+This project was built as a **full-stack development assignment** and demonstrates real-world SaaS architecture and logic.
+
+---
