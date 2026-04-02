@@ -62,14 +62,34 @@ body {
 body {
   margin: 0;
   color: var(--text);
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue",
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    "Noto Sans",
+    "Helvetica Neue",
     sans-serif;
   line-height: 1.45;
   font-size: 16px;
   background:
-    radial-gradient(1000px 720px at 0% -10%, rgba(224, 112, 92, 0.2), transparent 55%),
-    radial-gradient(900px 600px at 100% 0%, rgba(62, 207, 176, 0.14), transparent 50%),
-    radial-gradient(800px 500px at 50% 100%, rgba(255, 200, 150, 0.08), transparent 45%),
+    radial-gradient(
+      1000px 720px at 0% -10%,
+      rgba(224, 112, 92, 0.2),
+      transparent 55%
+    ),
+    radial-gradient(
+      900px 600px at 100% 0%,
+      rgba(62, 207, 176, 0.14),
+      transparent 50%
+    ),
+    radial-gradient(
+      800px 500px at 50% 100%,
+      rgba(255, 200, 150, 0.08),
+      transparent 45%
+    ),
     linear-gradient(165deg, var(--bg0), var(--bg1));
   background-attachment: fixed;
 }
@@ -146,7 +166,10 @@ a {
 }
 
 .lift {
-  transition: transform var(--motion-fast), box-shadow var(--motion-fast), border-color var(--motion-fast);
+  transition:
+    transform var(--motion-fast),
+    box-shadow var(--motion-fast),
+    border-color var(--motion-fast);
 }
 
 .lift:hover {
@@ -157,5 +180,33 @@ a {
 
 .accent-border {
   border-color: rgba(62, 207, 176, 0.35);
-  box-shadow: 0 0 0 1px rgba(62, 207, 176, 0.12), var(--shadow-soft);
+  box-shadow:
+    0 0 0 1px rgba(62, 207, 176, 0.12),
+    var(--shadow-soft);
+}
+
+/* Responsive width */
+.custom-toast {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  padding: 2px; /* needed for border effect */
+  background: linear-gradient(135deg, gold, #ffcc00, #ff9900, #ffd700, #fff8dc);
+}
+
+/* Inner content */
+.custom-toast-body {
+  background: #111;
+  color: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 14px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .custom-toast {
+    max-width: 90%;
+    margin: 0 auto;
+  }
 }

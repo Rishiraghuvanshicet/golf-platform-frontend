@@ -28,6 +28,11 @@ function App() {
         hideProgressBar={false}
         pauseOnHover={false}
         draggable={false}
+        newestOnTop
+        closeOnClick
+        theme="dark"
+        toastClassName="custom-toast"
+        bodyClassName="custom-toast-body"
       />
 
       <Routes>
